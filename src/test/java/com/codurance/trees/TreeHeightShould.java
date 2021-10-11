@@ -20,4 +20,24 @@ public class TreeHeightShould {
 
     assertThat(result).isEqualTo(0);
   }
+
+  @Test
+  void single_node_returns_zero() {
+    TreeHeight treeHeight = new TreeHeight();
+    int result = treeHeight.get(new Node());
+
+    assertThat(result).isEqualTo(0);
+  }
+
+  @Test
+  void root_node_with_child_returns_one() {
+    TreeHeight treeHeight = new TreeHeight();
+
+
+    final Node node = new Node();
+    node.insert(new Node());
+    int result = treeHeight.get(node);
+
+    assertThat(result).isEqualTo(1);
+  }
 }
