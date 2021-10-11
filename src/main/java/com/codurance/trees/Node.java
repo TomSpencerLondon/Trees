@@ -15,4 +15,8 @@ public class Node {
   public Node right() {
     return right;
   }
+
+  public Node left() {
+    return left;
+  }
 }

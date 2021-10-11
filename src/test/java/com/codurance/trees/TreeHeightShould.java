@@ -68,4 +68,18 @@ public class TreeHeightShould {
 
     assertThat(result).isEqualTo(2);
   }
+
+  @Test
+  void node_has_two_children_with_left_with_child_returns_two() {
+    TreeHeight treeHeight = new TreeHeight();
+    Node root = new Node();
+    Node right = new Node();
+    root.insert(right);
+    final Node left = new Node();
+    left.insert(new Node());
+    root.insert(left);
+    int result = treeHeight.get(root);
+
+    assertThat(result).isEqualTo(2);
+  }
 }
